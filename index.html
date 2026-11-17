@@ -12,6 +12,7 @@
         .brutal-box { background: #000000; border: 2px solid #27272a; transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1); }
         .brutal-box:hover { border-color: #ffffff; background: #09090b; transform: translateY(-2px); }
         .grid-line-b { border-bottom: 1px solid #27272a; }
+        
         @keyframes pulse-glow {
             0%, 100% { opacity: 1; }
             50% { opacity: 0.3; }
@@ -21,12 +22,13 @@
             100% { transform: rotate(360deg); }
         }
         @keyframes scan-line {
-            0% { transform: translateY(-100%); }
-            100% { transform: translateY(100%); }
+            0% { top: 0%; }
+            100% { top: 100%; }
         }
+        
         .animate-pulse-glow { animation: pulse-glow 2s infinite ease-in-out; }
-        .radar-spinner { animation: radar-sweep 4s linear infinite; transform-origin: center; }
-        .scanner-bar { animation: scan-line 2.5s ease-in-out infinite alternate; }
+        .radar-spinner { animation: radar-sweep 3s linear infinite; transform-origin: 50% 50%; }
+        .scanner-bar { animation: scan-line 2s ease-in-out infinite alternate; }
     </style>
 </head>
 <body class="min-h-screen flex flex-col justify-between selection:bg-white selection:text-black">
@@ -115,7 +117,7 @@
                         </p>
                     </div>
                     <div class="mt-8 text-xs font-bold uppercase tracking-wider text-zinc-300">
-                        → ZERO-HARDWARE MIDDLEWARE
+                        → GTC
                     </div>
                 </div>
 
@@ -131,7 +133,7 @@
                         </p>
                     </div>
                     <div class="mt-8 text-xs font-bold uppercase tracking-wider text-zinc-300">
-                        → RAICO / SELLAFIELD FOCUS
+                        → PRETA
                     </div>
                 </div>
 
@@ -154,60 +156,62 @@
             </div>
         </section>
 
-        <!-- CORE PRODUCT STACK WITH MOTION GRAPHICS -->
+        <!-- CORE PRODUCT STACK WITH ACTIVE MOTION GRAPHICS -->
         <section id="pillars" class="w-full max-w-7xl mx-auto pt-24 pb-16">
             <div class="text-xs uppercase tracking-widest text-zinc-400 mb-8">// Core Product Stack</div>
             <h2 class="text-4xl font-extrabold tracking-tight uppercase mb-12">Three Segregated Layers.</h2>
             <div class="space-y-6">
                 
-                <!-- Pillar 01: Radar / Fleet Coordination Visual -->
+                <!-- Pillar 01 -->
                 <div class="brutal-box p-8 flex flex-col md:flex-row justify-between items-center">
                     <div class="max-w-2xl mb-6 md:mb-0">
                         <div class="text-xs text-zinc-500 mb-2">PILLAR 01 // COMMERCIAL MIDDLEWARE</div>
                         <h3 class="text-2xl font-extrabold tracking-tight uppercase mb-3">GTC Command Tower</h3>
                         <p class="text-zinc-400 text-sm leading-relaxed">Real-time multi-agent orchestration dashboard. Manages 100+ forklifts and pickers across 65 dynamic facility sectors with automated collision avoidance.</p>
                     </div>
-                    <!-- Animated Radar Graphic -->
-                    <div class="w-24 h-24 border border-zinc-700 bg-zinc-950 relative flex items-center justify-center overflow-hidden shrink-0">
-                        <div class="absolute inset-0 bg-[radial-gradient(#27272a_1px,transparent_1px)] [background-size:8px_8px] opacity-40"></div>
-                        <div class="w-full h-0.5 bg-emerald-500/50 absolute radar-spinner"></div>
-                        <div class="w-2 h-2 bg-emerald-400 rounded-full animate-ping absolute top-6 left-8"></div>
-                        <div class="w-1.5 h-1.5 bg-white rounded-full absolute bottom-7 right-7"></div>
-                        <span class="text-[9px] text-emerald-400 font-mono tracking-tighter absolute bottom-1 left-1">RADAR_01</span>
+                    <!-- Animated Radar Screen -->
+                    <div class="w-28 h-28 border-2 border-zinc-700 bg-black relative flex items-center justify-center overflow-hidden shrink-0">
+                        <div class="absolute inset-0 border border-zinc-800 rounded-full m-2"></div>
+                        <div class="absolute w-full h-[1px] bg-zinc-800"></div>
+                        <div class="absolute h-full w-[1px] bg-zinc-800"></div>
+                        <div class="absolute w-14 h-14 border-r-2 border-emerald-500/80 rounded-full radar-spinner top-0 right-0 origin-bottom-left"></div>
+                        <div class="w-2 h-2 bg-emerald-400 rounded-full animate-ping absolute top-8 left-8"></div>
+                        <div class="w-1.5 h-1.5 bg-white rounded-full absolute bottom-8 right-8"></div>
+                        <span class="text-[9px] text-emerald-400 font-mono absolute bottom-1 left-1.5 bg-black px-0.5">RADAR_ACTIVE</span>
                     </div>
                 </div>
 
-                <!-- Pillar 02: Offline Heartbeat / Signal Visual -->
+                <!-- Pillar 02 -->
                 <div class="brutal-box p-8 flex flex-col md:flex-row justify-between items-center">
                     <div class="max-w-2xl mb-6 md:mb-0">
                         <div class="text-xs text-zinc-500 mb-2">PILLAR 02 // CIVIC ROUTING</div>
                         <h3 class="text-2xl font-extrabold tracking-tight uppercase mb-3">A.L.B.A. Civic Engine</h3>
                         <p class="text-zinc-400 text-sm leading-relaxed">Autonomous Location & Bypass Assistant. Offline tactical navigation kernel built for high-hazard municipal and emergency transit routing.</p>
                     </div>
-                    <!-- Animated Signal / Heartbeat Graphic -->
-                    <div class="w-28 h-20 border border-zinc-700 bg-zinc-950 relative flex items-center justify-center overflow-hidden shrink-0 px-2">
-                        <div class="absolute inset-0 flex items-center justify-center opacity-30">
-                            <div class="w-full h-[1px] bg-white"></div>
-                        </div>
-                        <svg class="w-full h-10 text-white" viewBox="0 0 100 30" fill="none">
-                            <path d="M0 15 H25 L35 5 L45 25 L55 10 L65 20 L75 15 H100" stroke="currentColor" stroke-width="2" class="animate-pulse"/>
+                    <!-- Animated Signal Waveform -->
+                    <div class="w-32 h-24 border-2 border-zinc-700 bg-black relative flex items-center justify-center overflow-hidden shrink-0 px-2">
+                        <div class="absolute inset-0 bg-[radial-gradient(#27272a_1px,transparent_1px)] [background-size:6px_6px] opacity-30"></div>
+                        <svg class="w-full h-12 text-emerald-400 relative z-10" viewBox="0 0 120 40" fill="none">
+                            <path d="M0 20 H30 L38 5 L46 35 L54 15 L62 25 L70 20 H120" stroke="currentColor" stroke-width="2.5" stroke-linecap="square"/>
                         </svg>
-                        <span class="text-[9px] text-zinc-400 font-mono tracking-tighter absolute bottom-1 left-1">KERNEL_OK</span>
+                        <div class="absolute inset-x-0 h-full bg-gradient-to-r from-black via-transparent to-black pointer-events-none"></div>
+                        <span class="text-[9px] text-zinc-400 font-mono absolute bottom-1 left-1.5 bg-black px-0.5">KERNEL_OK</span>
                     </div>
                 </div>
 
-                <!-- Pillar 03: Topographical Scan Visual -->
+                <!-- Pillar 03 -->
                 <div class="brutal-box p-8 flex flex-col md:flex-row justify-between items-center">
                     <div class="max-w-2xl mb-6 md:mb-0">
                         <div class="text-xs text-zinc-500 mb-2">PILLAR 03 // EDGE KERNEL</div>
                         <h3 class="text-2xl font-extrabold tracking-tight uppercase mb-3">Saurmandal CAD Integration</h3>
                         <p class="text-zinc-400 text-sm leading-relaxed">Automated spatial shading analysis and 3D yield modeling engine engineered for rapid trade contractor deployment.</p>
                     </div>
-                    <!-- Animated Scanning Grid Graphic -->
-                    <div class="w-24 h-24 border border-zinc-700 bg-zinc-950 relative overflow-hidden shrink-0">
-                        <div class="absolute inset-0 bg-[linear-gradient(to_right,#27272a_1px,transparent_1px),linear-gradient(to_bottom,#27272a_1px,transparent_1px)] bg-[size:12px_12px] opacity-40"></div>
-                        <div class="w-full h-1 bg-white/80 absolute scanner-bar shadow-[0_0_8px_rgba(255,255,255,0.8)]"></div>
-                        <span class="text-[9px] text-zinc-400 font-mono tracking-tighter absolute bottom-1 left-1">CAD_SCAN</span>
+                    <!-- Animated Scanning Laser Box -->
+                    <div class="w-28 h-28 border-2 border-zinc-700 bg-black relative overflow-hidden shrink-0 flex items-center justify-center">
+                        <div class="absolute inset-0 bg-[linear-gradient(to_right,#27272a_1px,transparent_1px),linear-gradient(to_bottom,#27272a_1px,transparent_1px)] bg-[size:10px_10px] opacity-40"></div>
+                        <div class="absolute w-full h-1 bg-white shadow-[0_0_10px_#ffffff] scanner-bar z-10"></div>
+                        <div class="absolute inset-2 border border-zinc-600/50"></div>
+                        <span class="text-[9px] text-zinc-400 font-mono absolute bottom-1 left-1.5 bg-black px-0.5 z-20">CAD_SCAN</span>
                     </div>
                 </div>
 
