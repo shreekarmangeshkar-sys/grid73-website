@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-black text-white scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid73 Technologies // Sovereign Spatial Intelligence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'JetBrains Mono', monospace; }
+        .brutal-border { border: 2px solid #ffffff; }
+        .brutal-box { background: #000000; border: 2px solid #27272a; transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1); }
+        .brutal-box:hover { border-color: #ffffff; background: #09090b; transform: translateY(-2px); }
+        .grid-line-b { border-bottom: 1px solid #27272a; }
+        @keyframes pulse-glow {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+        .animate-pulse-glow { animation: pulse-glow 2s infinite ease-in-out; }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-white selection:text-black">
+    
+    <!-- Top Navigation Bar -->
+    <header class="w-full border-b-2 border-zinc-800 px-6 py-5 flex justify-between items-center max-w-7xl mx-auto sticky top-0 z-50 bg-black/95 backdrop-blur-md">
+        <div class="flex items-center space-x-3 cursor-pointer group">
+            <img src="logo.png" alt="Grid73 Logo" class="w-6 h-6 object-contain transition-transform group-hover:rotate-90">
+            <span class="font-extrabold tracking-widest text-sm">GRID73</span>
+        </div>
+        <nav class="space-x-8 text-xs uppercase tracking-widest hidden md:flex text-zinc-400">
+            <a href="#sectors" class="hover:text-white transition-colors">Sectors</a>
+            <a href="#pillars" class="hover:text-white transition-colors">Architecture</a>
+            <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+        </nav>
+        <a href="#contact" class="border-2 border-white px-4 py-2 text-xs font-bold uppercase tracking-widest bg-white text-black hover:bg-zinc-200 transition-all">
+            Request Pilot ↗
+        </a>
+    </header>
+
+    <!-- Hero Section -->
+    <main class="max-w-7xl mx-auto px-6 py-24 flex-grow w-full">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+            
+            <div class="lg:col-span-8">
+                <div class="inline-flex items-center space-x-2 bg-zinc-950 border border-zinc-800 px-3 py-1 text-xs mb-8 uppercase tracking-widest text-zinc-400">
+                    <span class="w-1.5 h-1.5 bg-white rounded-full animate-pulse-glow"></span>
+                    <span>Glasgow, Scotland // Zero-Hardware Spatial Middleware</span>
+                </div>
+                <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight uppercase leading-none mb-8">
+                    Sovereign spatial intelligence, built for the edge.
+                </h1>
+                <p class="text-zinc-400 text-base md:text-lg leading-relaxed mb-10 max-w-2xl">
+                    Zero-hardware routing middleware and sovereign navigation cores engineered for industrial automation, high-hazard containment, and GPS-denied environments.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#pillars" class="brutal-border bg-white text-black px-8 py-4 text-center text-xs font-bold uppercase tracking-widest hover:bg-zinc-200 transition-all">
+                        Explore Pillars →
+                    </a>
+                    <a href="#contact" class="brutal-box px-8 py-4 text-center text-xs font-bold uppercase tracking-widest text-white hover:border-white transition-all">
+                        Institutional Inquiries
+                    </a>
+                </div>
+            </div>
+
+            <!-- Live Telemetry / Metrics Panel -->
+            <div class="lg:col-span-4 brutal-box p-6 font-mono text-xs">
+                <div class="flex justify-between items-center border-b border-zinc-800 pb-4 mb-4">
+                    <span class="text-zinc-500 uppercase tracking-widest">// SYSTEM METRICS</span>
+                    <span class="text-emerald-400 animate-pulse">ONLINE</span>
+                </div>
+                <div class="space-y-4 text-zinc-300">
+                    <div class="flex justify-between grid-line-b pb-3">
+                        <span class="text-zinc-500">Hardware Footprint</span>
+                        <span class="font-bold text-white">0.0 (Zero Retrofits)</span>
+                    </div>
+                    <div class="flex justify-between grid-line-b pb-3">
+                        <span class="text-zinc-500">Active Fleet Capacity</span>
+                        <span class="text-white">200 Agents / Node</span>
+                    </div>
+                    <div class="flex justify-between grid-line-b pb-3">
+                        <span class="text-zinc-500">GPS-Denied Latency</span>
+                        <span class="text-emerald-400">&lt; 1.2 ms</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-zinc-500">Air-Gapped Security</span>
+                        <span class="text-white">Full Local Isolation</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Target Sectors -->
+        <section id="sectors" class="mt-40 border-t-2 border-zinc-800 pt-20">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16">
+                <div>
+                    <span class="text-xs text-zinc-500 uppercase tracking-widest">// TARGET DOMAINS</span>
+                    <h2 class="text-3xl md:text-5xl font-bold uppercase tracking-tight mt-2">Intelligence for high-hazard environments.</h2>
+                </div>
+                <p class="text-zinc-400 text-sm max-w-sm mt-4 md:mt-0">
+                    Deployed where cloud connectivity fails, latency is unacceptable, and security cannot be compromised.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <div class="brutal-box p-10 flex flex-col justify-between group">
+                    <div>
+                        <div class="text-xs text-zinc-600 font-bold mb-6 font-mono">01 // NUCLEAR</div>
+                        <h3 class="text-xl font-bold uppercase mb-3">Decommissioning & Containment</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed">
+                            Autonomous MHE and robotic routing inside high-radiation containment zones where human entry is restricted and wireless signals are blocked.
+                        </p>
+                    </div>
+                    <div class="mt-12 text-xs font-bold uppercase tracking-wider text-zinc-500 group-hover:text-white transition-colors">
+                        → RAICo / Sellafield Focus
+                    </div>
+                </div>
+
+                <div class="brutal-box p-10 flex flex-col justify-between group">
+                    <div>
+                        <div class="text-xs text-zinc-600 font-bold mb-6 font-mono">02 // WAREHOUSING</div>
+                        <h3 class="text-xl font-bold uppercase mb-3">High-Density Industrial Fleet</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed">
+                            High-density mixed fleet coordination (AMRs and human pickers) engineered to maximize picks-per-hour without buying expensive tracking hardware.
+                        </p>
+                    </div>
+                    <div class="mt-12 text-xs font-bold uppercase tracking-wider text-zinc-500 group-hover:text-white transition-colors">
+                        → Zero-Hardware Middleware
+                    </div>
+                </div>
+
+                <div class="brutal-box p-10 flex flex-col justify-between group">
+                    <div>
+                        <div class="text-xs text-zinc-600 font-bold mb-6 font-mono">03 // INFRASTRUCTURE</div>
+                        <h3 class="text-xl font-bold uppercase mb-3">Sovereign Civic Navigation</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed">
+                            Offline civic routing, HGV compliance, and tactical local navigation operating entirely on edge silicon with zero external cloud calls.
+                        </p>
+                    </div>
+                    <div class="mt-12 text-xs font-bold uppercase tracking-wider text-zinc-500 group-hover:text-white transition-colors">
+                        → A.L.B.A. Civic Engine
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Core Architecture / Pillars Section -->
+        <section id="pillars" class="mt-40 border-t-2 border-zinc-800 pt-20">
+            <span class="text-xs text-zinc-500 uppercase tracking-widest">// CORE PRODUCT STACK</span>
+            <h2 class="text-3xl md:text-5xl font-bold uppercase tracking-tight mt-2 mb-16">Three segregated layers.</h2>
+
+            <div class="space-y-6">
+                
+                <div class="brutal-box p-8 md:p-12 flex flex-col md:flex-row justify-between items-start md:items-center">
+                    <div class="max-w-xl">
+                        <span class="text-xs text-zinc-500 font-bold">PILLAR 01 // COMMERCIAL MIDDLEWARE</span>
+                        <h3 class="text-2xl md:text-3xl font-bold uppercase mt-2 mb-4">GTC Command Tower</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed">
+                            Real-time multi-agent orchestration dashboard. Manages 100+ forklifts and pickers across 65 dynamic facility sectors with automated collision avoidance.
+                        </p>
+                    </div>
+                    <div class="mt-6 md:mt-0">
+                        <span class="border border-zinc-700 bg-zinc-900 px-4 py-2 text-xs uppercase tracking-widest text-zinc-300">Active Deployment</span>
+                    </div>
+                </div>
+
+                <div class="brutal-box p-8 md:p-12 flex flex-col md:flex-row justify-between items-start md:items-center">
+                    <div class="max-w-xl">
+                        <span class="text-xs text-zinc-500 font-bold">PILLAR 02 // CIVIC ROUTING</span>
+                        <h3 class="text-2xl md:text-3xl font-bold uppercase mt-2 mb-4">A.L.B.A. Platform</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed">
+                            Adaptive Location & Bypass Assistant. Scotland-first offline routing engine integrating live SRWR road feeds and clearance restrictions locally.
+                        </p>
+                    </div>
+                    <div class="mt-6 md:mt-0">
+                        <span class="border border-zinc-700 bg-zinc-900 px-4 py-2 text-xs uppercase tracking-widest text-zinc-300">Offline Ready</span>
+                    </div>
+                </div>
+
+                <div class="brutal-box p-8 md:p-12 flex flex-col md:flex-row justify-between items-start md:items-center">
+                    <div class="max-w-xl">
+                        <span class="text-xs text-zinc-500 font-bold">PILLAR 03 // DEFENSE & NUCLEAR CORE</span>
+                        <h3 class="text-2xl md:text-3xl font-bold uppercase mt-2 mb-4">gtc_core</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed">
+                            Clean-room segregated sovereign navigation engine. Engineered specifically for air-gapped, jammed, or high-radiation environments.
+                        </p>
+                    </div>
+                    <div class="mt-6 md:mt-0">
+                        <span class="border border-zinc-700 bg-zinc-900 px-4 py-2 text-xs uppercase tracking-widest text-zinc-300">Air-Gapped</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact / Pilot Inquiry Form (Connected to Formspree: mbgoogkv) -->
+        <section id="contact" class="mt-40 border-2 border-zinc-800 bg-zinc-950 p-8 md:p-16 max-w-4xl mx-auto relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-48 h-48 bg-white/5 blur-3xl pointer-events-none"></div>
+            <span class="text-xs text-zinc-500 uppercase tracking-widest">// INSTITUTIONAL ACCESS</span>
+            <h2 class="text-3xl font-bold uppercase tracking-tight mt-2 mb-4">Become a pilot partner.</h2>
+            <p class="text-zinc-400 text-sm mb-10 max-w-lg">
+                We are onboarding select research facilities, nuclear innovation leads (RAICo, NMIS), and industrial operators for validation trials.
+            </p>
+            
+            <form action="https://formspree.io/f/mbgoogkv" method="POST" class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest text-zinc-400 mb-2">Name / Organization</label>
+                        <input type="text" name="name_org" required class="w-full bg-black border-2 border-zinc-800 p-4 text-white text-sm focus:border-white focus:outline-none transition-colors">
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest text-zinc-400 mb-2">Professional Email</label>
+                        <input type="email" name="email" required class="w-full bg-black border-2 border-zinc-800 p-4 text-white text-sm focus:border-white focus:outline-none transition-colors">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs uppercase tracking-widest text-zinc-400 mb-2">Scope of Trial / R&D Focus</label>
+                    <textarea name="message" rows="4" required class="w-full bg-black border-2 border-zinc-800 p-4 text-white text-sm focus:border-white focus:outline-none transition-colors"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-white text-black py-4 text-xs font-bold uppercase tracking-widest hover:bg-zinc-200 transition-all active:scale-[0.99]">
+                    Submit Inquiry ↗
+                </button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full border-t-2 border-zinc-800 py-10 px-6 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-xs text-zinc-500 uppercase tracking-widest">
+        <div>&copy; 2026 Grid73 Technologies Ltd. All Rights Reserved.</div>
+        <div class="mt-4 md:mt-0">Headquartered in Glasgow, Scotland // Built for the Edge</div>
+    </footer>
+
+</body>
+</html>
