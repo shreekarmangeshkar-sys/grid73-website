@@ -7,7 +7,7 @@
     
     <!-- Primary SEO Meta Tags -->
     <meta name="title" content="Grid73 Technologies // Sovereign Spatial Intelligence & Edge Routing">
-    <meta name="description" content="Glasgow-based deep-tech startup building zero-hardware routing middleware, autonomous drone guidance, and air-gapped sovereign navigation cores for nuclear containment, defence, and high-hazard industrial fleets.">
+    <meta name="description" content="Glasgow-based deep-tech startup building zero-hardware routing middleware, autonomous drone guidance, and air-gapped sovereign navigation cores for defence, nuclear containment, and high-hazard industrial fleets.">
     <meta name="keywords" content="Grid73 Technologies, spatial intelligence, zero-hardware middleware, G.T.C. command tower, P.R.E.T.A. kernel, ALBA civic engine, autonomous drone routing, nuclear decommissioning software, Sellafield technology, edge computing Glasgow, GPS-denied navigation, industrial fleet management">
     <meta name="author" content="Grid73 Technologies Ltd">
     <meta name="robots" content="index, follow">
@@ -17,14 +17,14 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://grid73tech.com/">
     <meta property="og:title" content="Grid73 Technologies // Sovereign Spatial Intelligence">
-    <meta property="og:description" content="Zero-hardware routing middleware and sovereign navigation cores engineered for industrial automation, high-hazard nuclear containment, and GPS-denied environments.">
+    <meta property="og:description" content="Zero-hardware routing middleware and sovereign navigation cores engineered for industrial automation, high-hazard defence and nuclear containment, and GPS-denied environments.">
     <meta property="og:image" content="https://grid73tech.com/logo.png">
 
     <!-- Twitter Card Meta Tags -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://grid73tech.com/">
     <meta property="twitter:title" content="Grid73 Technologies // Sovereign Spatial Intelligence">
-    <meta property="twitter:description" content="Zero-hardware routing middleware and sovereign navigation cores engineered for industrial automation, high-hazard nuclear containment, and GPS-denied environments.">
+    <meta property="twitter:description" content="Zero-hardware routing middleware and sovereign navigation cores engineered for industrial automation, high-hazard defence and nuclear containment, and GPS-denied environments.">
     <meta property="twitter:image" content="https://grid73tech.com/logo.png">
 
     <!-- Comprehensive JSON-LD Schema for Tech Ecosystem & AI Crawlers -->
@@ -53,7 +53,7 @@
             "GPS-Denied Navigation",
             "High-Hazard Industrial Automation"
           ],
-          "description": "Sovereign spatial intelligence and zero-hardware routing middleware for high-hazard industrial, nuclear, and infrastructure sectors."
+          "description": "Sovereign spatial intelligence and zero-hardware routing middleware for high-hazard industrial, defence, nuclear, and infrastructure sectors."
         },
         {
           "@type": "SoftwareApplication",
@@ -110,10 +110,30 @@
             0% { top: 0%; }
             100% { top: 100%; }
         }
-        
+        @keyframes grid-drift {
+            0% { background-position: 0 0; }
+            100% { background-position: 40px 40px; }
+        }
+        @keyframes node-pulse {
+            0%, 100% { transform: scale(1); opacity: 0.2; }
+            50% { transform: scale(1.8); opacity: 0.8; }
+        }
+
         .animate-pulse-glow { animation: pulse-glow 2s infinite ease-in-out; }
         .radar-spinner { animation: radar-sweep 3s linear infinite; transform-origin: 50% 50%; }
         .scanner-bar { animation: scan-line 2s ease-in-out infinite alternate; }
+        
+        /* Tactical Mesh Background Animation */
+        .tactical-mesh {
+            background-image: 
+                linear-gradient(to right, rgba(39, 39, 42, 0.25) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(39, 39, 42, 0.25) 1px, transparent 1px);
+            background-size: 40px 40px;
+            animation: grid-drift 20s linear infinite;
+        }
+        .node-dot {
+            animation: node-pulse 3s infinite ease-in-out;
+        }
     </style>
 </head>
 <body class="min-h-screen flex flex-col justify-between selection:bg-white selection:text-black">
@@ -134,200 +154,211 @@
         </a>
     </header>
 
-    <!-- Hero Section -->
-    <main class="w-full max-w-7xl mx-auto px-4 py-24 flex-grow w-full">
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-16 items-center">
-            <div class="md:col-span-8">
-                <div class="inline-flex items-center space-x-2 bg-zinc-950 border border-zinc-800 px-3 py-1 text-xs uppercase tracking-widest text-zinc-400 mb-6">
-                    <span class="w-1.5 h-1.5 bg-white rounded-full animate-pulse-glow"></span>
-                    Glasgow, Scotland // Zero-Hardware Spatial Middleware
-                </div>
-                <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight uppercase leading-none mb-6">
-                    Intelligence for High-Hazard Environments.
-                </h1>
-                <p class="text-zinc-400 text-base md:text-lg leading-lg mb-8">
-                    Zero-hardware routing middleware and sovereign navigation cores engineered for industrial automation, high-hazard containment, and GPS-denied environments.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="#sectors" class="brutal-border bg-white text-black px-6 py-4 text-center text-xs font-bold uppercase tracking-widest hover:bg-zinc-200 transition-all">
-                        Explore Pillars
-                    </a>
-                    <a href="#contact" class="brutal-box px-6 py-4 text-center text-xs font-bold uppercase tracking-widest text-zinc-300 hover:border-white transition-all">
-                        Institutional Inquiries
-                    </a>
-                </div>
-            </div>
-            
-            <!-- Live Telemetry / Metrics Panel -->
-            <div class="md:col-span-4 brutal-box p-6 font-mono text-xs">
-                <div class="flex justify-between items-center border-b border-zinc-800 pb-4 mb-4">
-                    <span class="text-zinc-500 uppercase tracking-widest">// SYSTEM METRICS</span>
-                    <span class="text-emerald-400 animate-pulse">ONLINE // 99.9%</span>
-                </div>
-                <div class="space-y-4 text-zinc-300">
-                    <div class="flex justify-between grid-line-b pb-3">
-                        <span class="text-zinc-500">Active Footprint</span>
-                        <span class="font-bold text-white">0.0 (Zero retrofits)</span>
+    <!-- Hero Section with Animated Tactical Mesh Background -->
+    <main class="w-full relative overflow-hidden flex-grow flex flex-col justify-center">
+        <!-- Background Animated Mesh & Routing Nodes -->
+        <div class="absolute inset-0 tactical-mesh pointer-events-none z-0"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black pointer-events-none z-0"></div>
+        
+        <!-- Floating simulated routing nodes -->
+        <div class="absolute top-1/4 left-1/6 w-2 h-2 bg-white rounded-full node-dot pointer-events-none z-0" style="animation-delay: 0s;"></div>
+        <div class="absolute top-1/3 right-1/4 w-2 h-2 bg-emerald-400 rounded-full node-dot pointer-events-none z-0" style="animation-delay: 1.2s;"></div>
+        <div class="absolute bottom-1/3 left-1/3 w-1.5 h-1.5 bg-white rounded-full node-dot pointer-events-none z-0" style="animation-delay: 2.4s;"></div>
+
+        <div class="w-full max-w-7xl mx-auto px-4 py-24 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-16 items-center">
+                <div class="md:col-span-8">
+                    <div class="inline-flex items-center space-x-2 bg-zinc-950 border border-zinc-800 px-3 py-1 text-xs uppercase tracking-widest text-zinc-400 mb-6">
+                        <span class="w-1.5 h-1.5 bg-white rounded-full animate-pulse-glow"></span>
+                        Glasgow, Scotland // Zero-Hardware Spatial Middleware
                     </div>
-                    <div class="flex justify-between grid-line-b pb-3">
-                        <span class="text-zinc-500">Active Fleet Capacity</span>
-                        <span class="font-bold text-white">100+ / Node/s</span>
+                    <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight uppercase leading-none mb-6">
+                        Intelligence for High-Hazard Environments.
+                    </h1>
+                    <p class="text-zinc-400 text-base md:text-lg leading-lg mb-8">
+                        Zero-hardware routing middleware and sovereign navigation cores engineered for industrial automation, high-hazard containment, and GPS-denied environments.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#sectors" class="brutal-border bg-white text-black px-6 py-4 text-center text-xs font-bold uppercase tracking-widest hover:bg-zinc-200 transition-all">
+                            Explore Pillars
+                        </a>
+                        <a href="#contact" class="brutal-box px-6 py-4 text-center text-xs font-bold uppercase tracking-widest text-zinc-300 hover:border-white transition-all">
+                            Institutional Inquiries
+                        </a>
                     </div>
-                    <div class="flex justify-between grid-line-b pb-3">
-                        <span class="text-zinc-500">Latency</span>
-                        <span class="font-bold text-emerald-400">&lt; 1.2 ms</span>
+                </div>
+                
+                <!-- Live Telemetry / Metrics Panel -->
+                <div class="md:col-span-4 brutal-box p-6 font-mono text-xs backdrop-blur-sm bg-black/9ynth">
+                    <div class="flex justify-between items-center border-b border-zinc-800 pb-4 mb-4">
+                        <span class="text-zinc-500 uppercase tracking-widest">// SYSTEM METRICS</span>
+                        <span class="text-emerald-400 animate-pulse">ONLINE // 99.9%</span>
                     </div>
-                    <div class="flex justify-between pb-1">
-                        <span class="text-zinc-500">Air-gapped Security</span>
-                        <span class="font-bold text-white">Full local isolation</span>
+                    <div class="space-y-4 text-zinc-300">
+                        <div class="flex justify-between grid-line-b pb-3">
+                            <span class="text-zinc-500">Active Footprint</span>
+                            <span class="font-bold text-white">0.0 (Zero retrofits)</span>
+                        </div>
+                        <div class="flex justify-between grid-line-b pb-3">
+                            <span class="text-zinc-500">Active Fleet Capacity</span>
+                            <span class="font-bold text-white">100+ / Node/s</span>
+                        </div>
+                        <div class="flex justify-between grid-line-b pb-3">
+                            <span class="text-zinc-500">Latency</span>
+                            <span class="font-bold text-emerald-400">&lt; 1.2 ms</span>
+                        </div>
+                        <div class="flex justify-between pb-1">
+                            <span class="text-zinc-500">Air-gapped Security</span>
+                            <span class="font-bold text-white">Full local isolation</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- TARGET DOMAINS -->
-        <section id="sectors" class="w-full max-w-7xl mx-auto pt-32 pb-16">
-            <div class="text-xs uppercase tracking-widest text-zinc-400 mb-8">// Target Domains</div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-                <!-- 01 // WAREHOUSING & TRANSPORTATION -->
-                <div class="brutal-box p-6 flex flex-col justify-between hover:border-white transition-all">
-                    <div>
-                        <div class="text-xs text-zinc-500 mb-2">01 // WAREHOUSING & TRANSPORTATION</div>
-                        <h3 class="text-xl font-extrabold tracking-tight uppercase leading-none mb-4">
-                            HIGH-DENSITY INDUSTRIAL FLEET
-                        </h3>
-                        <p class="text-zinc-400 text-base leading-lg">
-                            High-density mixed fleet coordination (AMRs and human pickers) engineered to maximize picks-per-hour without buying expensive tracking hardware.
-                        </p>
-                    </div>
-                    <div class="mt-8 text-xs font-bold uppercase tracking-wider text-zinc-300">
-                        → G.T.C. (Ground Tactical Control)
-                    </div>
-                </div>
-
-                <!-- 02 // NUCLEAR & DEFENCE -->
-                <div class="brutal-box p-6 flex flex-col justify-between hover:border-white transition-all">
-                    <div>
-                        <div class="text-xs text-zinc-500 mb-2">02 // NUCLEAR & DEFENCE</div>
-                        <h3 class="text-xl font-extrabold tracking-tight uppercase leading-none mb-4">
-                            DECOMMISSIONING & CONTAINMENT
-                        </h3>
-                        <p class="text-zinc-400 text-base leading-lg">
-                            Autonomous drones, robotic MHE, and self-defence shielding vectors operating inside high tactical environments as well as high radiation containment zone where human entry is restricted and wireless signals are blocked.
-                        </p>
-                    </div>
-                    <div class="mt-8 text-xs font-bold uppercase tracking-wider text-zinc-300">
-                        → P.R.E.T.A. (Perimeter Robotics & Environmental Tactical Architecture)
-                    </div>
-                </div>
-
-                <!-- 03 // INFRASTRUCTURE -->
-                <div class="brutal-box p-6 flex flex-col justify-between hover:border-white transition-all">
-                    <div>
-                        <div class="text-xs text-zinc-500 mb-2">03 // INFRASTRUCTURE</div>
-                        <h3 class="text-xl font-extrabold tracking-tight uppercase leading-none mb-4">
-                            SOVEREIGN CIVIC NAVIGATION
-                        </h3>
-                        <p class="text-zinc-400 text-base leading-lg">
-                            Offline civic routing, HGV compliance, and tactical local navigation operating entirely on edge silicon with zero external cloud calls.
-                        </p>
-                    </div>
-                    <div class="mt-8 text-xs font-bold uppercase tracking-wider text-zinc-300">
-                        → A.L.B.A. (Adaptive Location & Bypass Assistant)
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- CORE PRODUCT STACK -->
-        <section id="pillars" class="w-full max-w-7xl mx-auto pt-24 pb-16">
-            <div class="text-xs uppercase tracking-widest text-zinc-400 mb-8">// Core Product Stack</div>
-            <h2 class="text-4xl font-extrabold tracking-tight uppercase mb-12">Three Segregated Layers.</h2>
-            <div class="space-y-6">
-                
-                <!-- Pillar 01: G.T.C. -->
-                <div class="brutal-box p-8 flex flex-col md:flex-row justify-between items-center">
-                    <div class="max-w-2xl mb-6 md:mb-0">
-                        <div class="text-xs text-zinc-500 mb-2">PILLAR 01 // GROUND TACTICAL CONTROL</div>
-                        <h3 class="text-2xl font-extrabold tracking-tight uppercase mb-3">G.T.C. Command Tower</h3>
-                        <p class="text-zinc-400 text-sm leading-relaxed">Real-time multi-agent orchestration dashboard. Manages 100+ forklifts and pickers across 65 dynamic facility sectors with automated collision avoidance.</p>
-                    </div>
-                    <!-- Animated Radar Screen -->
-                    <div class="w-28 h-28 border-2 border-zinc-700 bg-black relative flex items-center justify-center overflow-hidden shrink-0">
-                        <div class="absolute inset-0 border border-zinc-800 rounded-full m-2"></div>
-                        <div class="absolute w-full h-[1px] bg-zinc-800"></div>
-                        <div class="absolute h-full w-[1px] bg-zinc-800"></div>
-                        <div class="absolute w-14 h-14 border-r-2 border-emerald-500/80 rounded-full radar-spinner top-0 right-0 origin-bottom-left"></div>
-                        <div class="w-2 h-2 bg-emerald-400 rounded-full animate-ping absolute top-8 left-8"></div>
-                        <div class="w-1.5 h-1.5 bg-white rounded-full absolute bottom-8 right-8"></div>
-                        <span class="text-[9px] text-emerald-400 font-mono absolute bottom-1 left-1.5 bg-black px-0.5">GTC_ACTIVE</span>
-                    </div>
-                </div>
-
-                <!-- Pillar 02: P.R.E.T.A. -->
-                <div class="brutal-box p-8 flex flex-col md:flex-row justify-between items-center">
-                    <div class="max-w-2xl mb-6 md:mb-0">
-                        <div class="text-xs text-zinc-500 mb-2">PILLAR 02 // PERIMETER ROBOTICS & ENVIRONMENTAL TACTICAL ARCHITECTURE</div>
-                        <h3 class="text-2xl font-extrabold tracking-tight uppercase mb-3">P.R.E.T.A. Kernel</h3>
-                        <p class="text-zinc-400 text-sm leading-relaxed">Air-gapped autonomous drone routing, robotic MHE, and self-defence shield vectoring optimized for high tactical environments, high radiation containment zones, and severe GPS-denied sites.</p>
-                    </div>
-                    <!-- Animated Signal Waveform -->
-                    <div class="w-32 h-24 border-2 border-zinc-700 bg-black relative flex items-center justify-center overflow-hidden shrink-0 px-2">
-                        <div class="absolute inset-0 bg-[radial-gradient(#27272a_1px,transparent_1px)] [background-size:6px_6px] opacity-30"></div>
-                        <svg class="w-full h-12 text-emerald-400 relative z-10" viewBox="0 0 120 40" fill="none">
-                            <path d="M0 20 H30 L38 5 L46 35 L54 15 L62 25 L70 20 H120" stroke="currentColor" stroke-width="2.5" stroke-linecap="square"/>
-                        </svg>
-                        <div class="absolute inset-x-0 h-full bg-gradient-to-r from-black via-transparent to-black pointer-events-none"></div>
-                        <span class="text-[9px] text-zinc-400 font-mono absolute bottom-1 left-1.5 bg-black px-0.5">PRETA_SECURE</span>
-                    </div>
-                </div>
-
-                <!-- Pillar 03: A.L.B.A. Civic Engine -->
-                <div class="brutal-box p-8 flex flex-col md:flex-row justify-between items-center">
-                    <div class="max-w-2xl mb-6 md:mb-0">
-                        <div class="text-xs text-zinc-500 mb-2">PILLAR 03 // ADAPTIVE LOCATION & BYPASS ASSISTANT</div>
-                        <h3 class="text-2xl font-extrabold tracking-tight uppercase mb-3">A.L.B.A. Civic Engine</h3>
-                        <p class="text-zinc-400 text-sm leading-relaxed">Offline sovereign civic routing, HGV compliance, and tactical local navigation operating entirely on edge silicon with zero external cloud calls.</p>
-                    </div>
-                    <!-- Animated Scanning Laser Box -->
-                    <div class="w-28 h-28 border-2 border-zinc-700 bg-black relative overflow-hidden shrink-0 flex items-center justify-center">
-                        <div class="absolute inset-0 bg-[linear-gradient(to_right,#27272a_1px,transparent_1px),linear-gradient(to_bottom,#27272a_1px,transparent_1px)] bg-[size:10px_10px] opacity-40"></div>
-                        <div class="absolute w-full h-1 bg-white shadow-[0_0_10px_#ffffff] scanner-bar z-10"></div>
-                        <div class="absolute inset-2 border border-zinc-600/50"></div>
-                        <span class="text-[9px] text-zinc-400 font-mono absolute bottom-1 left-1.5 bg-black px-0.5 z-20">ALBA_SCAN</span>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- CONTACT SECTION -->
-        <section id="contact" class="w-full max-w-2xl mx-auto pt-24 pb-12">
-            <div class="brutal-box p-8 md:p-12">
-                <div class="text-xs uppercase tracking-widest text-zinc-500 mb-2">// Inquiries</div>
-                <h2 class="text-3xl font-extrabold tracking-tight uppercase mb-6">Request Deployment Pilot</h2>
-                <form action="https://formspree.io/f/yourformid" method="POST" class="space-y-6">
-                    <div>
-                        <label class="block text-xs uppercase tracking-widest text-zinc-400 mb-2">Organization / Industrial Hub</label>
-                        <input type="text" name="organization" required class="w-full bg-black border-2 border-zinc-800 p-4 text-white text-sm focus:border-white focus:outline-none transition-colors">
-                    </div>
-                    <div>
-                        <label class="block text-xs uppercase tracking-widest text-zinc-400 mb-2">Professional Email</label>
-                        <input type="email" name="email" required class="w-full bg-black border-2 border-zinc-800 p-4 text-white text-sm focus:border-white focus:outline-none transition-colors">
-                    </div>
-                    <div>
-                        <label class="block text-xs uppercase tracking-widest text-zinc-400 mb-2">Scope of Trial / R&D Focus</label>
-                        <textarea name="message" rows="4" required class="w-full bg-black border-2 border-zinc-800 p-4 text-white text-sm focus:border-white focus:outline-none transition-colors"></textarea>
-                    </div>
-                    <button type="submit" class="w-full bg-white text-black py-4 font-bold uppercase tracking-widest hover:bg-zinc-200 transition-all active:scale-[0.99]">
-                        Submit Inquiry /
-                    </button>
-                </form>
-            </div>
-        </section>
     </main>
+
+    <!-- TARGET DOMAINS -->
+    <section id="sectors" class="w-full max-w-7xl mx-auto pt-32 pb-16">
+        <div class="text-xs uppercase tracking-widest text-zinc-400 mb-8">// Target Domains</div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <!-- 01 // WAREHOUSING & TRANSPORTATION -->
+            <div class="brutal-box p-6 flex flex-col justify-between hover:border-white transition-all">
+                <div>
+                    <div class="text-xs text-zinc-500 mb-2">01 // WAREHOUSING & TRANSPORTATION</div>
+                    <h3 class="text-xl font-extrabold tracking-tight uppercase leading-none mb-4">
+                        HIGH-DENSITY INDUSTRIAL FLEET
+                    </h3>
+                    <p class="text-zinc-400 text-base leading-lg">
+                        High-density mixed fleet coordination (AMRs and human pickers) engineered to maximize picks-per-hour without buying expensive tracking hardware.
+                    </p>
+                </div>
+                <div class="mt-8 text-xs font-bold uppercase tracking-wider text-zinc-300">
+                    → G.T.C. (Ground Tactical Control)
+                </div>
+            </div>
+
+            <!-- 02 // DEFENCE & NUCLEAR -->
+            <div class="brutal-box p-6 flex flex-col justify-between hover:border-white transition-all">
+                <div>
+                    <div class="text-xs text-zinc-500 mb-2">02 // DEFENCE & NUCLEAR</div>
+                    <h3 class="text-xl font-extrabold tracking-tight uppercase leading-none mb-4">
+                        DECOMMISSIONING & CONTAINMENT
+                    </h3>
+                    <p class="text-zinc-400 text-base leading-lg">
+                        Autonomous drones, robotic MHE, and self-defence shielding vectors operating inside high tactical environments as well as high radiation containment zone where human entry is restricted and wireless signals are blocked.
+                    </p>
+                </div>
+                <div class="mt-8 text-xs font-bold uppercase tracking-wider text-zinc-300">
+                    → P.R.E.T.A. (Perimeter Robotics & Environmental Tactical Architecture)
+                </div>
+            </div>
+
+            <!-- 03 // INFRASTRUCTURE -->
+            <div class="brutal-box p-6 flex flex-col justify-between hover:border-white transition-all">
+                <div>
+                    <div class="text-xs text-zinc-500 mb-2">03 // INFRASTRUCTURE</div>
+                    <h3 class="text-xl font-extrabold tracking-tight uppercase leading-none mb-4">
+                        SOVEREIGN CIVIC NAVIGATION
+                    </h3>
+                    <p class="text-zinc-400 text-base leading-lg">
+                        Offline civic routing, HGV compliance, and tactical local navigation operating entirely on edge silicon with zero external cloud calls.
+                    </p>
+                </div>
+                <div class="mt-8 text-xs font-bold uppercase tracking-wider text-zinc-300">
+                    → A.L.B.A. (Adaptive Location & Bypass Assistant)
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CORE PRODUCT STACK -->
+    <section id="pillars" class="w-full max-w-7xl mx-auto pt-24 pb-16">
+        <div class="text-xs uppercase tracking-widest text-zinc-400 mb-8">// Core Product Stack</div>
+        <h2 class="text-4xl font-extrabold tracking-tight uppercase mb-12">Three Segregated Layers.</h2>
+        <div class="space-y-6">
+            
+            <!-- Pillar 01: G.T.C. -->
+            <div class="brutal-box p-8 flex flex-col md:flex-row justify-between items-center">
+                <div class="max-w-2xl mb-6 md:mb-0">
+                    <div class="text-xs text-zinc-500 mb-2">PILLAR 01 // GROUND TACTICAL CONTROL</div>
+                    <h3 class="text-2xl font-extrabold tracking-tight uppercase mb-3">G.T.C. Command Tower</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed">Real-time multi-agent orchestration dashboard. Manages 100+ forklifts and pickers across 65 dynamic facility sectors with automated collision avoidance.</p>
+                </div>
+                <!-- Animated Radar Screen -->
+                <div class="w-28 h-28 border-2 border-zinc-700 bg-black relative flex items-center justify-center overflow-hidden shrink-0">
+                    <div class="absolute inset-0 border border-zinc-800 rounded-full m-2"></div>
+                    <div class="absolute w-full h-[1px] bg-zinc-800"></div>
+                    <div class="absolute h-full w-[1px] bg-zinc-800"></div>
+                    <div class="absolute w-14 h-14 border-r-2 border-emerald-500/80 rounded-full radar-spinner top-0 right-0 origin-bottom-left"></div>
+                    <div class="w-2 h-2 bg-emerald-400 rounded-full animate-ping absolute top-8 left-8"></div>
+                    <div class="w-1.5 h-1.5 bg-white rounded-full absolute bottom-8 right-8"></div>
+                    <span class="text-[9px] text-emerald-400 font-mono absolute bottom-1 left-1.5 bg-black px-0.5">GTC_ACTIVE</span>
+                </div>
+            </div>
+
+            <!-- Pillar 02: P.R.E.T.A. -->
+            <div class="brutal-box p-8 flex flex-col md:flex-row justify-between items-center">
+                <div class="max-w-2xl mb-6 md:mb-0">
+                    <div class="text-xs text-zinc-500 mb-2">PILLAR 02 // PERIMETER ROBOTICS & ENVIRONMENTAL TACTICAL ARCHITECTURE</div>
+                    <h3 class="text-2xl font-extrabold tracking-tight uppercase mb-3">P.R.E.T.A. Kernel</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed">Air-gapped autonomous drone routing, robotic MHE, and self-defence shield vectoring optimized for high tactical environments, high radiation containment zones, and severe GPS-denied sites.</p>
+                </div>
+                <!-- Animated Signal Waveform -->
+                <div class="w-32 h-24 border-2 border-zinc-700 bg-black relative flex items-center justify-center overflow-hidden shrink-0 px-2">
+                    <div class="absolute inset-0 bg-[radial-gradient(#27272a_1px,transparent_1px)] [background-size:6px_6px] opacity-30"></div>
+                    <svg class="w-full h-12 text-emerald-400 relative z-10" viewBox="0 0 120 40" fill="none">
+                        <path d="M0 20 H30 L38 5 L46 35 L54 15 L62 25 L70 20 H120" stroke="currentColor" stroke-width="2.5" stroke-linecap="square"/>
+                    </svg>
+                    <div class="absolute inset-x-0 h-full bg-gradient-to-r from-black via-transparent to-black pointer-events-none"></div>
+                    <span class="text-[9px] text-zinc-400 font-mono absolute bottom-1 left-1.5 bg-black px-0.5">PRETA_SECURE</span>
+                </div>
+            </div>
+
+            <!-- Pillar 03: A.L.B.A. Civic Engine -->
+            <div class="brutal-box p-8 flex flex-col md:flex-row justify-between items-center">
+                <div class="max-w-2xl mb-6 md:mb-0">
+                    <div class="text-xs text-zinc-500 mb-2">PILLAR 03 // ADAPTIVE LOCATION & BYPASS ASSISTANT</div>
+                    <h3 class="text-2xl font-extrabold tracking-tight uppercase mb-3">A.L.B.A. Civic Engine</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed">Offline sovereign civic routing, HGV compliance, and tactical local navigation operating entirely on edge silicon with zero external cloud calls.</p>
+                </div>
+                <!-- Animated Scanning Laser Box -->
+                <div class="w-28 h-28 border-2 border-zinc-700 bg-black relative overflow-hidden shrink-0 flex items-center justify-center">
+                    <div class="absolute inset-0 bg-[linear-gradient(to_right,#27272a_1px,transparent_1px),linear-gradient(to_bottom,#27272a_1px,transparent_1px)] bg-[size:10px_10px] opacity-40"></div>
+                    <div class="absolute w-full h-1 bg-white shadow-[0_0_10px_#ffffff] scanner-bar z-10"></div>
+                    <div class="absolute inset-2 border border-zinc-600/50"></div>
+                    <span class="text-[9px] text-zinc-400 font-mono absolute bottom-1 left-1.5 bg-black px-0.5 z-20">ALBA_SCAN</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="w-full max-w-2xl mx-auto pt-24 pb-12">
+        <div class="brutal-box p-8 md:p-12">
+            <div class="text-xs uppercase tracking-widest text-zinc-500 mb-2">// Inquiries</div>
+            <h2 class="text-3xl font-extrabold tracking-tight uppercase mb-6">Request Deployment Pilot</h2>
+            <form action="https://formspree.io/f/yourformid" method="POST" class="space-y-6">
+                <div>
+                    <label class="block text-xs uppercase tracking-widest text-zinc-400 mb-2">Organization / Industrial Hub</label>
+                    <input type="text" name="organization" required class="w-full bg-black border-2 border-zinc-800 p-4 text-white text-sm focus:border-white focus:outline-none transition-colors">
+                </div>
+                <div>
+                    <label class="block text-xs uppercase tracking-widest text-zinc-400 mb-2">Professional Email</label>
+                    <input type="email" name="email" required class="w-full bg-black border-2 border-zinc-800 p-4 text-white text-sm focus:border-white focus:outline-none transition-colors">
+                </div>
+                <div>
+                    <label class="block text-xs uppercase tracking-widest text-zinc-400 mb-2">Scope of Trial / R&D Focus</label>
+                    <textarea name="message" rows="4" required class="w-full bg-black border-2 border-zinc-800 p-4 text-white text-sm focus:border-white focus:outline-none transition-colors"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-white text-black py-4 font-bold uppercase tracking-widest hover:bg-zinc-200 transition-all active:scale-[0.99]">
+                    Submit Inquiry /
+                </button>
+            </form>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="w-full border-t-2 border-zinc-800 py-8 px-6 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-xs text-zinc-500 tracking-widest">
