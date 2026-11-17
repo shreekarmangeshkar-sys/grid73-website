@@ -16,7 +16,17 @@
             0%, 100% { opacity: 1; }
             50% { opacity: 0.3; }
         }
+        @keyframes radar-sweep {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        @keyframes scan-line {
+            0% { transform: translateY(-100%); }
+            100% { transform: translateY(100%); }
+        }
         .animate-pulse-glow { animation: pulse-glow 2s infinite ease-in-out; }
+        .radar-spinner { animation: radar-sweep 4s linear infinite; transform-origin: center; }
+        .scanner-bar { animation: scan-line 2.5s ease-in-out infinite alternate; }
     </style>
 </head>
 <body class="min-h-screen flex flex-col justify-between selection:bg-white selection:text-black">
@@ -138,6 +148,66 @@
                     </div>
                     <div class="mt-8 text-xs font-bold uppercase tracking-wider text-zinc-300">
                         → A.L.B.A. CIVIC ENGINE
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CORE PRODUCT STACK WITH MOTION GRAPHICS -->
+        <section id="pillars" class="w-full max-w-7xl mx-auto pt-24 pb-16">
+            <div class="text-xs uppercase tracking-widest text-zinc-400 mb-8">// Core Product Stack</div>
+            <h2 class="text-4xl font-extrabold tracking-tight uppercase mb-12">Three Segregated Layers.</h2>
+            <div class="space-y-6">
+                
+                <!-- Pillar 01: Radar / Fleet Coordination Visual -->
+                <div class="brutal-box p-8 flex flex-col md:flex-row justify-between items-center">
+                    <div class="max-w-2xl mb-6 md:mb-0">
+                        <div class="text-xs text-zinc-500 mb-2">PILLAR 01 // COMMERCIAL MIDDLEWARE</div>
+                        <h3 class="text-2xl font-extrabold tracking-tight uppercase mb-3">GTC Command Tower</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed">Real-time multi-agent orchestration dashboard. Manages 100+ forklifts and pickers across 65 dynamic facility sectors with automated collision avoidance.</p>
+                    </div>
+                    <!-- Animated Radar Graphic -->
+                    <div class="w-24 h-24 border border-zinc-700 bg-zinc-950 relative flex items-center justify-center overflow-hidden shrink-0">
+                        <div class="absolute inset-0 bg-[radial-gradient(#27272a_1px,transparent_1px)] [background-size:8px_8px] opacity-40"></div>
+                        <div class="w-full h-0.5 bg-emerald-500/50 absolute radar-spinner"></div>
+                        <div class="w-2 h-2 bg-emerald-400 rounded-full animate-ping absolute top-6 left-8"></div>
+                        <div class="w-1.5 h-1.5 bg-white rounded-full absolute bottom-7 right-7"></div>
+                        <span class="text-[9px] text-emerald-400 font-mono tracking-tighter absolute bottom-1 left-1">RADAR_01</span>
+                    </div>
+                </div>
+
+                <!-- Pillar 02: Offline Heartbeat / Signal Visual -->
+                <div class="brutal-box p-8 flex flex-col md:flex-row justify-between items-center">
+                    <div class="max-w-2xl mb-6 md:mb-0">
+                        <div class="text-xs text-zinc-500 mb-2">PILLAR 02 // CIVIC ROUTING</div>
+                        <h3 class="text-2xl font-extrabold tracking-tight uppercase mb-3">A.L.B.A. Civic Engine</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed">Autonomous Location & Bypass Assistant. Offline tactical navigation kernel built for high-hazard municipal and emergency transit routing.</p>
+                    </div>
+                    <!-- Animated Signal / Heartbeat Graphic -->
+                    <div class="w-28 h-20 border border-zinc-700 bg-zinc-950 relative flex items-center justify-center overflow-hidden shrink-0 px-2">
+                        <div class="absolute inset-0 flex items-center justify-center opacity-30">
+                            <div class="w-full h-[1px] bg-white"></div>
+                        </div>
+                        <svg class="w-full h-10 text-white" viewBox="0 0 100 30" fill="none">
+                            <path d="M0 15 H25 L35 5 L45 25 L55 10 L65 20 L75 15 H100" stroke="currentColor" stroke-width="2" class="animate-pulse"/>
+                        </svg>
+                        <span class="text-[9px] text-zinc-400 font-mono tracking-tighter absolute bottom-1 left-1">KERNEL_OK</span>
+                    </div>
+                </div>
+
+                <!-- Pillar 03: Topographical Scan Visual -->
+                <div class="brutal-box p-8 flex flex-col md:flex-row justify-between items-center">
+                    <div class="max-w-2xl mb-6 md:mb-0">
+                        <div class="text-xs text-zinc-500 mb-2">PILLAR 03 // EDGE KERNEL</div>
+                        <h3 class="text-2xl font-extrabold tracking-tight uppercase mb-3">Saurmandal CAD Integration</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed">Automated spatial shading analysis and 3D yield modeling engine engineered for rapid trade contractor deployment.</p>
+                    </div>
+                    <!-- Animated Scanning Grid Graphic -->
+                    <div class="w-24 h-24 border border-zinc-700 bg-zinc-950 relative overflow-hidden shrink-0">
+                        <div class="absolute inset-0 bg-[linear-gradient(to_right,#27272a_1px,transparent_1px),linear-gradient(to_bottom,#27272a_1px,transparent_1px)] bg-[size:12px_12px] opacity-40"></div>
+                        <div class="w-full h-1 bg-white/80 absolute scanner-bar shadow-[0_0_8px_rgba(255,255,255,0.8)]"></div>
+                        <span class="text-[9px] text-zinc-400 font-mono tracking-tighter absolute bottom-1 left-1">CAD_SCAN</span>
                     </div>
                 </div>
 
